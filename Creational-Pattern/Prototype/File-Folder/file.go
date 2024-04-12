@@ -14,4 +14,4 @@ func (f *File) print(indentation string) {
 func(f *File) clone() Inode {
 	return &File{name: f.name +"_clone"}
 	
-}
+}sa
