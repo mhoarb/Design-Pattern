@@ -1,5 +1,9 @@
 package main
 
+/*
+*
+create a creator struct
+*/
 type Ak47 struct {
 	Gun
 }

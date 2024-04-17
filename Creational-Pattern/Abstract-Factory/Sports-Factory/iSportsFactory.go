@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+/*
+*
+abstract product interface
+*/
 type ISportsFactory interface {
 	makeShoe() IShoe
 	makeShirt() IShirt
