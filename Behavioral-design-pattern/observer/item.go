@@ -34,12 +34,17 @@ func (i *Item) notifyAll() {
 		observer.update(i.name)
 	}
 }
-
+/**
+complete this ...
+ */
 func RemoveFromSlice(observerList []Observer , observerToRemove Observer)[]Observer {
-	observerListLength := len(observerList)
-	for i , observer := range observerList {
-		if observerToRemove.getID() == observer.getID() {
-			observerList[]
-		}
-	}
+	//observerListLength := len(observerList)
+	//for i , observer := range observerList {
+	//	if observerToRemove.getID() == observer.getID() {
+	//
+	//	}
+	//}
+
+	//doing later
+
 }
