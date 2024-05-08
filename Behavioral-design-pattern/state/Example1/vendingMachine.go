@@ -1,6 +1,9 @@
 package main
 
+import "fmt"
+
 var _ State = &VendingMachine{}
+
 type VendingMachine struct {
 	hasItem       State
 	itemRequested State
@@ -10,6 +13,7 @@ type VendingMachine struct {
 	itemCount     int
 	itemPrice     int
 }
+
 func NewVendingMachine(itemCount, itemPrice int) *VendingMachine {
 	v := &VendingMachine{
 		itemPrice: itemPrice,
@@ -26,11 +30,10 @@ func NewVendingMachine(itemCount, itemPrice int) *VendingMachine {
 	v.noItem = noHasItemState
 	v.hasMoney = hasMoneyState
 
-
 	return v
 }
 
-func(v *VendingMachine)setState(s State) {
+func (v *VendingMachine) setState(s State) {
 	v.currentState = s
 }
 
@@ -57,4 +60,7 @@ func (v *VendingMachine) dispenseItem() error {
 	}
 	return nil
 }
-func(v *VendingMachine)	incrementItem
+func (v *VendingMachine) incrementItemCount(count int) {
+	fmt.Printf("adding %d items\n", count)
+	v.itemCount = v.itemCount + count
+}
