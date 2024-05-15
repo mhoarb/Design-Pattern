@@ -18,7 +18,7 @@ func(av *AreaCalculatorVisitor) VisitTriangle(t *Triangle) {
 	av.totalArea = (t.base * t.height) / 2
 }
 
-func(av *AreaCalculatorVisitor) VisitRectangle(t *Triangle) {
-	av.totalArea = t.base * t.height
+func(av *AreaCalculatorVisitor) VisitRectangle(r *Rectangle) {
+	av.totalArea = r.length * r.width
 }
 
